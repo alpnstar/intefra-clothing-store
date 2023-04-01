@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dde4b5c2-7079-4a61-a5db-1e6dfa825f40" name="Changes" comment="statical files">
+    <list default="true" id="dde4b5c2-7079-4a61-a5db-1e6dfa825f40" name="Changes" comment="edit admin panel">
+      <change afterPath="$PROJECT_DIR$/alpina/main/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alpina/main/migrations/0002_alter_greetingindex_category.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/alpina/main/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/alpina/alpina/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/alpina/alpina/settings.py" afterDir="false" />
@@ -14522,7 +14524,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="dev-max1t1a-configurate_static_files" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -14539,7 +14541,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "dev-max1t1a-configurate__static__files",
+    "git-widget-placeholder": "dev-max1t1a-create__admin__panel",
     "last_opened_file_path": "/home/max1t1a/PycharmProjects/intefra-clothing-store/alpina/api/static/bundle",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
@@ -14577,6 +14579,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="statical files" />
-    <option name="LAST_COMMIT_MESSAGE" value="statical files" />
+    <MESSAGE value="edit admin panel" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit admin panel" />
   </component>
 </project>
