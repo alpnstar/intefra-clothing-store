@@ -2,4 +2,321 @@
 @import url(../styles/normalize.css);
 @import url(../styles/basic-styles.css);
 // SCSS @import:
-@import 'mixins'; @import 'vars';
+@import "mixins";
+@import "vars";
+* {
+    font-family: "Montserrat";
+}
+.container {
+    max-width: 1202px;
+    padding: 0 10px 0 10px;
+    margin: 0 auto;
+}
+
+.burger {
+    position: absolute;
+    left: 7px;
+    top: 45px;
+    span {
+        display: block;
+        border-radius: 10px;
+        width: 34px;
+        height: 2.5px;
+        margin-bottom: 7px;
+        background-color: black;
+        &:last-child {
+            margin-bottom: 0;
+            width: 17px;
+        }
+    }
+}
+.header {
+    .empty {
+        display: none;
+        flex: 1 1 0%;
+    }
+    &__wrapper {
+        height: 100px;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 33px 10px 20px 126px;
+    }
+
+    &__logo-menu-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__search {
+        width: 100%;
+        padding: 13px 0 12px 50px;
+        border: 1px solid #d9d9d9;
+        &::placeholder {
+            color: #b2b2b2;
+            font-size: 14px;
+        }
+        &-wrapper {
+            position: relative;
+            width: 52.4%;
+            margin-left: 56px;
+            &::before {
+                position: absolute;
+                top: 12px;
+                left: 16px;
+                content: url(../imgs/header/search.svg);
+            }
+        }
+    }
+
+    &__buttons {
+        &-wrapper {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            font-size: 12px;
+            gap: 35px;
+        }
+    }
+
+    &__buttons-element {
+        padding: 0 10px;
+        text-align: center;
+        font-weight: 500;
+        &:first-child {
+            display: none;
+        }
+        &:last-child {
+            font-size: 14px;
+        }
+    }
+}
+
+.logo {
+    padding: 0 10px;
+    img {
+        max-width: 168px;
+    }
+}
+
+////////////////////////////////////!
+
+.categories {
+    &__wrapper {
+    }
+
+    &__man {
+    }
+
+    &__woman {
+    }
+}
+.brands {
+    &__wrapper {
+    }
+
+    &__elements {
+    }
+}
+.button-1 {
+}
+.collection {
+    &__wrapper {
+    }
+
+    &__elements {
+    }
+
+    &__element {
+    }
+}
+.new-items {
+    &__wrapper {
+    }
+
+    &__elements {
+    }
+
+    &__element {
+    }
+
+    &__text {
+    }
+}
+.perfume {
+    &__wrapper {
+    }
+
+    &__element {
+    }
+
+    &__header {
+    }
+}
+.discounts {
+    &__wrapper {
+    }
+
+    &__banner {
+    }
+
+    &__header {
+    }
+
+    &__elements {
+    }
+
+    &__element {
+    }
+
+    &__element-name {
+    }
+
+    &__element-price-block {
+    }
+
+    &__price-past {
+    }
+
+    &__price-current {
+    }
+}
+.artigiani {
+    &__wrapper {
+    }
+
+    &__text {
+    }
+}
+.sending {
+    &__wrapper {
+    }
+
+    &__content {
+    }
+
+    &__header {
+    }
+
+    &__input {
+    }
+
+    &__button {
+    }
+}
+.about {
+    &__wrapper {
+    }
+
+    &__item {
+    }
+}
+.footer {
+    &__wrapper {
+    }
+
+    &__section-1 {
+    }
+
+    &__section-1-text {
+    }
+
+    &__section-2 {
+    }
+
+    &__section-3 {
+    }
+
+    &__section-4 {
+    }
+
+    &__section-4-block-1 {
+    }
+
+    &__section-4-header {
+    }
+
+    &__address {
+    }
+
+    &__section-4-block-2 {
+    }
+
+    &__section-4-block-3 {
+    }
+}
+
+@include mq("tablet-wide", max) {
+    .header {
+        &__wrapper {
+            height: 61px;
+            padding: 15px 15px 15px 15px;
+        }
+        .burger {
+            top: 27px;
+            left: 15px;
+        }
+        &__search-wrapper {
+            display: none;
+        }
+        .empty {
+            display: block;
+            flex: 1 1 0%;
+        }
+        &__buttons {
+            flex: 1 1 0%;
+            &-element {
+                &:first-child {
+                    display: block;
+                }
+                &:nth-child(2) {
+                    display: none;
+                }
+            }
+        }
+        &__logo-menu-wrapper {
+            .burger {
+                left: 15px;
+            }
+            .logo {
+            }
+        }
+    }
+}
+@include mq("tablet", max) {
+    .header {
+        .burger {
+            top: 17px;
+        }
+        &__search-wrapper {
+        }
+        &__buttons {
+            &-text {
+                display: none;
+            }
+
+            &-element {
+                &:first-child {
+                }
+                &:nth-child(2) {
+                }
+            }
+        }
+        &__logo-menu-wrapper {
+        }
+    }
+}
+@include mq("phone", max) {
+    .header {
+        .empty {
+            flex-grow: 1;
+        }
+        .logo img {
+            width: 100px;
+        }
+        &__buttons-wrapper {
+            gap: 10px;
+        }
+    }
+}

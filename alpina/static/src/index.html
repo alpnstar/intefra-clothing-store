@@ -27,23 +27,33 @@
         <![endif]-->
     <header class="header">
         <div class="header__wrapper container">
+            <div class="empty">
+
+            </div>
+            <div class="burger">
+                <span></span><span></span><span></span>
+            </div>
             <div class="header__logo-menu-wrapper">
-                <div class="burger">
-                    <span></span><span></span><span></span>
-                </div>
                 <span class="logo">
-                    INTEFRA
+                    <img src="imgs/logo.svg" alt="">
                 </span>
             </div>
-            <input type="search" name="" class="header__search">
+            <div class="header__search-wrapper">
+                <input type="search" name="" class="header__search" placeholder="Поиск по продукции">
+            </div>
             <div class="header__buttons">
-                <div class="header__buttons-element">
-                    <img src="imgs/header/delivery.svg" alt="Доставка">
-                    <span class="header__buttons-text">Доставка</span>
-                </div>
-                <div class="header__buttons-element">
-                    <img src="imgs/header/trash.svg" alt="Корзина">
-                    <span class="header__buttons-text">Доставка</span>
+                <div class="header__buttons-wrapper">
+                    <div class="header__buttons-element">
+                        <img src="imgs/header/search2.svg" width="19px" alt="">
+                    </div>
+                    <div class="header__buttons-element">
+                        <img src="imgs/header/delivery.svg" alt="Доставка">
+                        <div class="header__buttons-text">Доставка</div>
+                    </div>
+                    <div class="header__buttons-element">
+                        <img src="imgs/header/trash.svg" alt="Корзина">
+                        <div class="header__buttons-text">Корзина</div>
+                    </div>
                 </div>
             </div>
         </div>
