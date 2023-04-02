@@ -2,5 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/alpina" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/alpina/intefra-clothing-store" vcs="Git" />
   </component>
 </project>
