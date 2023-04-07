@@ -2,7 +2,7 @@
 @import url(../styles/normalize.css);
 @import url(../styles/basic-styles.css);
 // SCSS @import:
-@import "mixins";
+@import "mixins&functions";
 @import "vars";
 * {
     font-family: "Montserrat";
@@ -55,7 +55,7 @@
         border: 1px solid #d9d9d9;
         &::placeholder {
             color: #b2b2b2;
-            font-size: 14px;
+            font-size: rem(14);
         }
         &-wrapper {
             position: relative;
@@ -75,7 +75,7 @@
             display: flex;
             justify-content: flex-end;
             align-items: center;
-            font-size: 12px;
+            font-size: rem(12);
             gap: 35px;
         }
     }
@@ -88,7 +88,7 @@
             display: none;
         }
         &:last-child {
-            font-size: 14px;
+            font-size: rem(14);
         }
     }
 }
@@ -254,7 +254,7 @@
             padding: 15px 15px 15px 15px;
         }
         .burger {
-            top: 27px;
+            top: 17px;
             left: 15px;
         }
         &__search-wrapper {
@@ -286,9 +286,7 @@
 }
 @include mq("tablet", max) {
     .header {
-        .burger {
-            top: 17px;
-        }
+       
         &__search-wrapper {
         }
         &__buttons {

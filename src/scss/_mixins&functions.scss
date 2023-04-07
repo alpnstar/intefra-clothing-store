@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @mixin push--auto {
     margin: {
         left: auto;
@@ -25,10 +27,28 @@ $breakpoints: (
   @if map_has_key($breakpoints, $width) {
    $width: map_get($breakpoints, $width);
    @if $type == max {
-    $width: $width - 1px;
+    $width: $width + 1px;
    }
    @media only screen and (#{$type}-width: $width) {
     @content;
    }
   }
+}
+
+// TO %
+@function prc($pxOne,$pxTwo) {
+  $result: math.div($pxOne, $pxTwo) * 100%;
+  @return $result;
+}
+
+// REM 
+@function rem($px) {
+  $result: math.div($px, 16) + rem;
+  @return $result;
+}
+
+// EM 
+@function em($px) {
+  $result: math.div($px, 16) + em;
+  @return $result;
 }
