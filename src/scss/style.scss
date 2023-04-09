@@ -1,6 +1,6 @@
-@import url(../styles/fonts.css);
-@import url(../styles/normalize.css);
-@import url(../styles/basic-styles.css);
+@import url("../styles/fonts.css");
+@import url("../styles/normalize.css");
+@import url("../styles/basic-styles.css");
 // SCSS @import:
 @import "mixins&functions";
 @import "vars";
@@ -11,11 +11,24 @@
 }
 * {
     font-family: "Montserrat";
+    transition: 0.2s;
 }
 .container {
     max-width: 1200px;
     padding: 0 10px 0 10px;
     margin: 0 auto;
+}
+
+.main-h3-wrapper {
+    text-align: center;
+    margin: 0 0 48px;
+    .main-h3 {
+        font-weight: 400;
+        text-transform: uppercase;
+        font-size: 50px;
+        line-height: 120%;
+        color: #333333;
+    }
 }
 
 .burger {
@@ -153,9 +166,30 @@
 }
 .brands {
     &__wrapper {
+        padding: 84px 0 43px 0;
     }
 
     &__elements {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__element {
+        padding: 15px;
+        height: 111px;
+        min-width: 120px;
+
+        display: flex;
+        align-items: center;
+        flex: 1 1 0;
+
+        border-right: 1px solid #d9d9d9;
+
+        &:last-child {
+            border: 0;
+        }
+        img {
+            width: 100%;
+        }
     }
 }
 .button-1 {
@@ -357,7 +391,7 @@
             width: 100px;
         }
         &__buttons-wrapper {
-            gap: 10.1px;
+            gap: 10px;
         }
     }
 }
