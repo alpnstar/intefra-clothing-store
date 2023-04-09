@@ -1,16 +1,16 @@
 @use "sass:math";
 
 @mixin push--auto {
-    margin: {
-        left: auto;
-        right: auto;
-    }
+  margin: {
+    left: auto;
+    right: auto;
+  }
 }
 
 @mixin pseudo($display: block, $pos: absolute, $content: "") {
-    content: $content;
-    display: $display;
-    position: $pos;
+  content: $content;
+  display: $display;
+  position: $pos;
 }
 
 $breakpoints: (
@@ -21,34 +21,39 @@ $breakpoints: (
   "tablet":       768px,
   "tablet-wide":  1024px,
   "desktop":      1248px,
-  "desktop-wide": 1440px
+  "desktop-wide": 1440px,
 );
 @mixin mq($width, $type: min) {
   @if map_has_key($breakpoints, $width) {
-   $width: map_get($breakpoints, $width);
-   @if $type == max {
-    $width: $width + 1px;
-   }
-   @media only screen and (#{$type}-width: $width) {
-    @content;
-   }
+    $width: map_get($breakpoints, $width);
+    @if $type == max {
+      $width: $width + 1px;
+    }
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
   }
 }
 
 // TO %
-@function prc($pxOne,$pxTwo) {
+@function prc($pxOne, $pxTwo) {
   $result: math.div($pxOne, $pxTwo) * 100%;
   @return $result;
 }
 
-// REM 
+// REM
 @function rem($px) {
   $result: math.div($px, 16) + rem;
   @return $result;
 }
 
-// EM 
+// EM
 @function em($px) {
   $result: math.div($px, 16) + em;
+  @return $result;
+}
+
+@function prcp($pxOne, $pxTwo, $pxThree) {
+  $result: math.div(math.div($pxOne, $pxTwo) * 100, 100) * $pxThree + px;
   @return $result;
 }

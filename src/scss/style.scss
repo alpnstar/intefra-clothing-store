@@ -4,11 +4,16 @@
 // SCSS @import:
 @import "mixins&functions";
 @import "vars";
+
+@function bind($px) {
+    $result: prcp($px, 1920, 1521);
+    @return $result;
+}
 * {
     font-family: "Montserrat";
 }
 .container {
-    max-width: 1202px;
+    max-width: 1200px;
     padding: 0 10px 0 10px;
     margin: 0 auto;
 }
@@ -41,7 +46,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 33px 10px 20px 126px;
+        padding: 33px 10px 20px 115px;
     }
 
     &__logo-menu-wrapper {
@@ -59,7 +64,7 @@
         }
         &-wrapper {
             position: relative;
-            width: 52.4%;
+            width: 52%;
             margin-left: 56px;
             &::before {
                 position: absolute;
@@ -76,7 +81,7 @@
             justify-content: flex-end;
             align-items: center;
             font-size: rem(12);
-            gap: 35px;
+            gap: bind(50);
         }
     }
 
@@ -100,16 +105,50 @@
     }
 }
 
-////////////////////////////////////!
+//* CATEGORIES
 
 .categories {
-    &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    > div {
+        height: 700px;
+        flex-grow: 1;
+        min-width: 385px;
     }
-
+    &__h2-wrapper {
+        position: relative;
+        display: inline-block;
+        top: 43.5%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        ::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 100%;
+            left: 50%; //26.5%;
+            transform: translate(-50%, 0);
+            width: 191px;
+            height: 2px;
+            background-color: #d9d9d9;
+        }
+    }
+    h2 {
+        font-size: rem(75);
+        color: #ffffff;
+        font-weight: 400;
+        text-transform: uppercase;
+        line-height: 122%;
+    }
     &__man {
+        background: url("../imgs/category/main-category-man.png") no-repeat;
+        background-position: -37px 0;
+        background-size: cover;
     }
 
     &__woman {
+        background: url("../imgs/category/main-category-woman.png") no-repeat;
+        background-size: cover;
     }
 }
 .brands {
@@ -279,29 +318,33 @@
             .burger {
                 left: 15px;
             }
-            .logo {
-            }
+        }
+    }
+    .categories {
+        h2 {
+            font-size: rem(50);
         }
     }
 }
 @include mq("tablet", max) {
     .header {
-       
-        &__search-wrapper {
-        }
         &__buttons {
             &-text {
                 display: none;
             }
-
-            &-element {
-                &:first-child {
-                }
-                &:nth-child(2) {
-                }
-            }
         }
-        &__logo-menu-wrapper {
+    }
+    .categories {
+        > div {
+            width: 100%;
+        }
+    }
+}
+@include mq("tablet-small", max) {
+    .categories {
+        > div {
+            height: 500px;
+            background-position: center;
         }
     }
 }
@@ -314,7 +357,7 @@
             width: 100px;
         }
         &__buttons-wrapper {
-            gap: 10px;
+            gap: 10.1px;
         }
     }
 }
